@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme d'Échange de Documents Sécurisé Inter-Entreprises</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50; 
+            --secondary: #3498db; 
+            --accent: #2ecc71; /
+            --background: #f4f7f9;
+            --light-text: #ecf0f1;
+            --dark-text: #34495e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+        .navbar {
+            background-color: var(--primary);
+            color: var(--light-text);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600; 
+            transition: background-color 0.3s;
+            margin-left: 10px; 
+        }
+
+        .navbar .cta-button:hover {
+            background-color: #27ae60;
+        }
+        
+        .navbar .cta-button.admin-btn {
+            background-color: #e67e22 !important; 
+        }
+        .navbar .cta-button.admin-btn:hover {
+            background-color: #d35400 !important;
+        }
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), 
+                url('') center/cover no-repeat; 
+                
+    color: white;
+    text-align: center;
+    padding: 140px 5% 80px; 
+}
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .features {
+            padding: 50px 5%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            width: 30%;
+            min-width: 280px;
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 40px 5%;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background-color: var(--primary);
+            color: var(--light-text);
+            text-align: center;
+            padding: 20px 5%;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar .nav-links {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar .nav-links a {
+                margin: 5px 0; 
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .feature-item {
+                width: 100%; 
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-handshake"></i> E-Connect
+        </div>
+        <div class="nav-links">
+            <a href="#features">Fonctionnalités</a>
+            <a href="#security-section">Sécurité</a>
+            
+            <a href="login.html" class="cta-button">Connexion / Espace Client</a> 
+            <a href="login.html?admin=true" class="cta-button admin-btn">Espace Admin 🔑</a> 
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Échangez vos Documents Professionnels en Toute Sécurité</h1>
+        <p>Une plateforme dédiée à la collaboration simplifiée et sécurisée entre votre entreprise et votre partenaire.</p>
+        <a href="login.html" class="cta-button">Démarrer l'Échange Sécurisé</a>
+    </header>
+
+    <section class="features" id="features">
+        <h2>Vos Outils de Collaboration</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <i class="fas fa-file-invoice"></i>
+                <h3>Partage Multi-format</h3>
+                <p>Échangez facilement tout type de documents : PDF, images, dossiers compressés (.zip), documents Word ou Excel.</p>
+            </div>
+            
+            <div class="feature-item" id="security-section"> 
+                <i class="fas fa-lock"></i>
+                <h3>Sécurité et Traçabilité</h3>
+                <p>Transferts chiffrés. Chaque action (envoi, lecture, téléchargement) est journalisée pour un audit complet.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-inbox"></i>
+                <h3>Boîte de Réception Unique</h3>
+                <p>Tous les documents échangés sont centralisés dans une "boîte" partagée, classés par dossier et par statut.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Prêt à Simplifier vos Échanges ?</h2>
+        <p>Connectez-vous pour accéder instantanément à votre espace de travail sécurisé.</p>
+        <a href="login.html" class="cta-button" style="background-color: var(--primary);">Accéder à la Plateforme</a>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 E-Doc Connect. | <a href="#">Politique de Confidentialité</a> | <a href="#">Support</a></p>
+    </footer>
+
+</body>
+</html>

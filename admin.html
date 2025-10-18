@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Administrateur - E-Doc Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --success: #2ecc71;
+            --light: #ecf0f1;
+            --sidebar-bg: #34495e;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: var(--light);
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: var(--sidebar-bg);
+            color: white;
+            padding: 20px 0;
+        }
+        .logo { text-align: center; padding: 20px; font-size: 1.5rem; }
+        .menu-item { padding: 15px 20px; cursor: pointer; transition: background 0.2s; }
+        .menu-item:hover, .menu-item.active { background-color: rgba(255, 255, 255, 0.1); }
+        .main-content { flex: 1; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+
+     
+        .admin-alert {
+         padding: 15px;
+            background-color: #fcf8e3;
+            border: 1px solid #faebcc;
+            color: #8a6d3b;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-left: 5px solid var(--secondary);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        .stat-card h3 { color: var(--primary); margin-bottom: 10px; }
+        .stat-card p { font-size: 1.5rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">Admin Panel</div>
+            <ul class="menu">
+                <li class="menu-item active"><i class="fas fa-tachometer-alt"></i> Tableau de bord Admin</li>
+                <li class="menu-item"><i class="fas fa-users-cog"></i> Gérer Utilisateurs (Mon Ent.)</li>
+                <li class="menu-item"><i class="fas fa-exchange-alt"></i> Journaux des Échanges</li>
+                <li class="menu-item"><i class="fas fa-shield-alt"></i> Configurations Globales</li>
+                <li class="menu-item"><a href="logout.php" style="color: white; text-decoration: none;"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h2>Tableau de Bord Administrateur</h2>
+                <span style="color: var(--secondary);">Connecté en tant que: Admin [Entreprise A]</span>
+            </div>
+
+            <div class="admin-alert">
+                <i class="fas fa-exclamation-triangle"></i> **Attention:** Vous avez un accès total aux données de votre entreprise et aux logs d'échange partagés.
+            </div>
+
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="stat-card" style="border-left-color: var(--secondary);">
+                    <h3>Utilisateurs actifs (Mon Ent.)</h3>
+                    <p>8</p> 
+                </div>
+                <div class="stat-card" style="border-left-color: var(--accent);">
+                    <h3>Documents partagés ce mois (Total)</h3>
+                    <p>45</p>
+                </div>
+                <div class="stat-card" style="border-left-color: var(--success);">
+                    <h3>Documents en attente (Mon Ent.)</h3>
+                    <p>2</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h3>Journal des Échanges Récents</h3>
+                <p>Tableau affichant l'historique complet des envois/réceptions entre les deux entreprises, y compris qui a fait quoi.</p>
+                </div>
+
+        </div>
+    </div>
+    
+    </body>
+</html>
